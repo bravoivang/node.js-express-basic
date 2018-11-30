@@ -1,10 +1,5 @@
 var express = require ('express');
 var app = express();
-/*
-var bodyParser = require ('body-parser');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
-*/
 var coches = [{
                 "puertas": "2",
                 "motor": "v8",
@@ -31,8 +26,6 @@ var coches = [{
                 "modelo": "2018",
               }
 ];
-
-
 var puerto = 3000;
 var server = app.listen(puerto, function(){
     console.log("Server corriendo en: ",puerto);
