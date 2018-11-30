@@ -1,0 +1,19 @@
+{
+  "name": "node.js-express-basic",
+  "version": "1.0.0",
+  "description": "Basic API web with express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bravoivang/node.js-express-basic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bravoivang/node.js-express-basic/issues"
+  },
+  "homepage": "https://github.com/bravoivang/node.js-express-basic#readme"
+}
