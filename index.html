@@ -16,16 +16,34 @@
     <button id="elimina" onclick="eliminar()">-</button>
 
     <script>
+        var frase;
         var input =  document.getElementById("cons");
         function consultar() {
-            //XMLHttpRequest. 
-            var resultado = "el";
-            var posicion = "numero index de array";
-            input.value = resultado;
-            input.readOnly = true;
-            input.data = posicion;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState === 4) {
+                    frase = xhttp.response;
+                    console.log(frase);
+                    var resultado = frase;
+                    var posicion = "numero index de array";
+                    input.readOnly = true;
+                    input.data = posicion;
+                    input.value = resultado;
+                }
+            }
+            xhttp.open("GET", "http://localhost:3000/frases", true);
+            xhttp.send();
+            
         }
         function editar() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState===4){
+                    console.log("Works fine");
+                }
+            }
+            xhttp.open("PUT", "http://localhost:3000/frases",true);
+            xhttp.send();
             input.readOnly = false;
             input.addEventListener("keyup", function(event) {
             event.preventDefault();
