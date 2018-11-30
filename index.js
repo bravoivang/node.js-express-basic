@@ -1,11 +1,12 @@
 var express = require ('express');
-var cors = require('cors');
-var app = express();
 
-var corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-  }
+var app = express();
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
 /*
 var bodyParser = require ('body-parser');
 app.use(bodyParser.json());

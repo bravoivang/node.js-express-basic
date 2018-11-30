@@ -31,7 +31,7 @@
                     input.value = resultado;
                 }
             }
-            xhttp.open("GET", "http://localhost:3000/consulta", true);
+            xhttp.open("GET", "consulta", true);
             xhttp.send();
             
         }
@@ -42,7 +42,7 @@
                     console.log("Works fine");
                 }
             }
-            xhttp.open("PUT", "http://localhost:3000/edicion",true);
+            xhttp.open("PUT", "edicion",true);
             xhttp.send();
             input.readOnly = false;
             input.addEventListener("keyup", function(event) {
