@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bravoivang/node.js-express-basic/issues"
   },
-  "homepage": "https://github.com/bravoivang/node.js-express-basic#readme"
+  "homepage": "https://github.com/bravoivang/node.js-express-basic#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
