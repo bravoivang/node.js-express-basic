@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="consulta" onclick="consultar()">?</button>
+        <input type="text" placeholder="tu frase del día" id="cons" readonly>
+    <button id="edita" onclick="editar()">/</button>
+        
+    <button id="agrega" onclick="agregar()">+</button>
+        
+    <button id="elimina" onclick="eliminar()">-</button>
+
+    <script>
+        var input =  document.getElementById("cons");
+        function consultar() {
+            //XMLHttpRequest. 
+            var resultado = "el";
+            var posicion = "numero index de array";
+            input.value = resultado;
+            input.readOnly = true;
+            input.data = posicion;
+        }
+        function editar() {
+            input.readOnly = false;
+            input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                //XMLHttpRequest input.data = posicion;
+                input.removeEventListener("keyup",() => {input.readOnly = true;});       
+            }
+            });
+            
+        }
+        function agregar () {
+            input.readOnly = false;
+            input.value = "";
+            input.placeholder = "Agrega una frase a la lista";
+            input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                //XMLHttpRequest
+                input.removeEventListener("keyup", () => {input.readOnly = true;});    
+            }
+            });
+        }
+        function eliminar () {
+            if (input.value = ""){
+                input.placeholder = "No hay frase para eliminar";
+            } 
+            else{
+                //XMHTL RESQUIES con input.data con ID
+                // callback
+                input.value = "";
+                input.placeholder = "Frase borrada";
+                input.readOnly = true;
+            }
+        }
+    </script>
+</body>
+</html>

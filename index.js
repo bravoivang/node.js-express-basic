@@ -5,32 +5,19 @@ var bodyParser = require ('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 */
-var coches = [{
-                "puertas": "2",
-                "motor": "v8",
-                "modelo": "2012",
-              },
-              {
-                "puertas": "4",
-                "motor": "v8",
-                "modelo": "2012",
-              },
-              {
-                "puertas": "4",
-                "motor": "v6",
-                "modelo": "2015",
-              },
-              {
-                "puertas": "8",
-                "motor": "v14",
-                "modelo": "2018",
-              },
-              {
-                "puertas": "2",
-                "motor": "v2",
-                "modelo": "2018",
-              }
-];
+var frases = ["Sos una excelente persona",
+            "Es culpa tuya",
+            "Jupiter esta retornando a su casa",
+            "Un mal día lo tiene cualquiera",
+            "Macri = Macron",
+            "La vida es bella con plata",
+            "Te pasa por haberlo votado",
+            "Agarra la pala"];
+
+app.get('/frases', function (req,res) {
+    res.sendFile('C:/Users/Ivan/Documents/Learning/express/node.js-express-basic/index.html');
+});
+
 
 
 var puerto = 3000;

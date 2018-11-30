@@ -7,10 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // soporte para bodies codif
 */
 //Ejemplo: GET http://localhost:8080/items
 app.get('/items', function(req, res, next) {
-  if(req.query.filter) {
-	next();
-	return;
-  }
+console.log(req.query);
   res.send('Get all');
 });
 
